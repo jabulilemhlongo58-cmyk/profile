@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(40, 208, 172, 0.3);
+    color: #effdf9;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #28d0ac 0%, #5be7c9 50%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-light {
+    background: linear-gradient(135deg, #97f4de 0%, #5be7c9 50%, #28d0ac 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(40, 208, 172, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(40, 208, 172, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .glass {
+    background: rgba(19, 28, 48, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(40, 208, 172, 0.12);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(40, 208, 172, 0.15);
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+  .animate-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .opacity-0-init {
+    opacity: 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0fb590, #067463);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #28d0ac, #0fb590);
+}
